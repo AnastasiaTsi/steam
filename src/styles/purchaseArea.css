@@ -1,0 +1,29 @@
+.purchase-area-box {
+  background: -webkit-linear-gradient(
+    150deg,
+    rgba(226, 244, 255, 0.3) 5%,
+    rgba(84, 107, 115, 0.3) 95%
+  );
+  border-radius: 4px;
+  font-size: 13px;
+  padding: 16px;
+  padding-bottom: 26px;
+}
+
+.purchase-action {
+  height: 32px;
+  vertical-align: bottom;
+  display: inline-block;
+  /* background-color: rgba(0,0,0,0.5); */
+  background-color: #000000;
+  padding: 2px 2px 2px 0px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  white-space: nowrap;
+  font-size: 0;
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  width: fit-content;
+}
