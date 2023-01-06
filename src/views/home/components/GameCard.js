@@ -41,7 +41,7 @@ const GameCard = ({ game }) => {
 
   return (
     <StyledCard
-      onClick={() => handleOpenGameInfo(game.appid)}
+      onClick={() => handleOpenGameInfo(game._id)}
       style={{ margin: "8%" }}
     >
       <CardMedia

@@ -25,6 +25,13 @@ const initialState = {
   upcoming: null,
 };
 
+const categories = [
+  "new_and_trending",
+  "top_sellers",
+  "being_played",
+  "upcoming",
+];
+
 export const apiSlice = createSlice({
   name: "games",
   initialState,
@@ -36,10 +43,10 @@ export const apiSlice = createSlice({
 
       if (!category) {
         state.games = data;
-      } else if (!isNaN(category)) {
-        state.game = data[0];
-      } else {
+      } else if (categories.includes(category)) {
         state[category] = data;
+      } else {
+        state.game = data[0];
       }
     });
   },

@@ -32,7 +32,7 @@ const AppInfo = () => {
 
   useEffect(() => {
     if (!state) navigate("/");
-    if (game?.appid !== state) dispatch(apiGET({ appid: state }));
+    if (game?._id !== state) dispatch(apiGET({ appid: state }));
   }, [dispatch, state]);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const AppInfo = () => {
   return (
     <div style={{ ...root, backgroundImage: `url(${game?.background})` }}>
       <NavBar />
-      {game && game?.appid === state ? (
+      {game && game?._id === state ? (
         <PageFormat>
           <Grid item container sm={12} md={8}>
             <Grid item xs={12}>
